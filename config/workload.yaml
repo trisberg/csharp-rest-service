@@ -22,9 +22,15 @@ spec:
   env:
   - name: DOTNET_CLI_TELEMETRY_OPTOUT
     value: "true"
-
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/trisberg/csharp-rest-service
       ref:
         branch: main
+  serviceClaims:
+    - name: database
+      ref:
+        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+        kind: ResourceClaim
+        name: customer-database-claim
+

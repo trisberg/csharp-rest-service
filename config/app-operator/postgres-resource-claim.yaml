@@ -7,4 +7,4 @@ spec:
     apiVersion: sql.tanzu.vmware.com/v1
     kind: Postgres
     name: customer-database
-    namespace: service-instances
+    # namespace: service-instances
